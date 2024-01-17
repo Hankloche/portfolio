@@ -1,0 +1,106 @@
+
+h1{
+    text-align: left;
+    color: #556b2f;
+    text-shadow: 0  1px 0 #666666;
+    font-size: 100%;
+    font-family: Bodoni;
+}
+
+/* Réinitialiser les marges, les espacements et définir box-sizing sur tous les éléments */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuration de la barre de navigation */
+nav {
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #ffffff75;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Cacher l'input de type checkbox */
+input[type=checkbox] {
+    display: none;
+}
+
+/* Configuration des liens de la barre de navigation */
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: #556b2f;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: Bodoni;
+}
+
+/* Configuration de l'icône burger */
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 3px;
+}
+
+/* Cacher l'icône burger sur les écrans d'ordinateur */
+.burger {
+    display: none;
+}
+
+/* Styles spécifiques pour les écrans mobiles (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    /* Cacher les liens de la barre de navigation sur les écrans mobiles */
+    .nav-links {
+        display: none;
+    }
+
+    /* Afficher l'icône burger sur les écrans mobiles */
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Afficher les liens de la barre de navigation lorsque la case est cochée sur les écrans mobiles */
+    input[type=checkbox]:checked ~ .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        background-color: #333;
+        width: 50%;
+        height: 92vh;
+    }
+}
+
+img{
+    height: 60%;
+    width: 20%;
+}
+
+body{
+    background-size: cover;
+    background-image: url("Planisphère.gif");
+}
+
+.photo{
+    text-align: center;
+}
